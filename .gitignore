@@ -1015,3 +1015,5 @@
 /ReportUtilityBills/tests/results_bills.csv
 /HPXMLtoOpenStudio/resources/data/g_functions/g-function_library_1.0
 /HPXMLtoOpenStudio/tests/in.schedules.csv
+/.venv
+/OTFP/Lib

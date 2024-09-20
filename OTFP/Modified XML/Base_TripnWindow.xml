@@ -1,0 +1,550 @@
+<ns0:HPXML xmlns:ns0="http://hpxmlonline.com/2023/09" schemaVersion="4.0">
+  <ns0:XMLTransactionHeaderInformation>
+    <ns0:XMLType>HPXML</ns0:XMLType>
+    <ns0:XMLGeneratedBy>tasks.rb</ns0:XMLGeneratedBy>
+    <ns0:CreatedDateAndTime>2000-01-01T00:00:00-07:00</ns0:CreatedDateAndTime>
+    <ns0:Transaction>create</ns0:Transaction>
+  </ns0:XMLTransactionHeaderInformation>
+  <ns0:SoftwareInfo>
+    <ns0:extension>
+      <ns0:SimulationControl>
+        <ns0:Timestep>60</ns0:Timestep>
+      </ns0:SimulationControl>
+      <ns0:UtilityBillScenarios>
+        <ns0:UtilityBillScenario>
+          <ns0:Name>Bills</ns0:Name>
+        </ns0:UtilityBillScenario>
+      </ns0:UtilityBillScenarios>
+    </ns0:extension>
+  </ns0:SoftwareInfo>
+  <ns0:Building>
+    <ns0:BuildingID id="MyBuilding" />
+    <ns0:Site>
+      <ns0:SiteID id="SiteID" />
+      <ns0:Address>
+        <ns0:StateCode>CO</ns0:StateCode>
+      </ns0:Address>
+    </ns0:Site>
+    <ns0:ProjectStatus>
+      <ns0:EventType>proposed workscope</ns0:EventType>
+    </ns0:ProjectStatus>
+    <ns0:BuildingDetails>
+      <ns0:BuildingSummary>
+        <ns0:Site>
+          <ns0:SiteType>suburban</ns0:SiteType>
+          <ns0:Surroundings>stand-alone</ns0:Surroundings>
+          <ns0:VerticalSurroundings>no units above or below</ns0:VerticalSurroundings>
+          <ns0:AzimuthOfFrontOfHome>180</ns0:AzimuthOfFrontOfHome>
+          <ns0:FuelTypesAvailable>
+            <ns0:Fuel>electricity</ns0:Fuel>
+            <ns0:Fuel>natural gas</ns0:Fuel>
+          </ns0:FuelTypesAvailable>
+        </ns0:Site>
+        <ns0:BuildingConstruction>
+          <ns0:ResidentialFacilityType>single-family detached</ns0:ResidentialFacilityType>
+          <ns0:NumberofConditionedFloors>2.0</ns0:NumberofConditionedFloors>
+          <ns0:NumberofConditionedFloorsAboveGrade>1.0</ns0:NumberofConditionedFloorsAboveGrade>
+          <ns0:AverageCeilingHeight>8.0</ns0:AverageCeilingHeight>
+          <ns0:NumberofBedrooms>3</ns0:NumberofBedrooms>
+          <ns0:NumberofBathrooms>2</ns0:NumberofBathrooms>
+          <ns0:ConditionedFloorArea>2700.0</ns0:ConditionedFloorArea>
+          <ns0:ConditionedBuildingVolume>21600.0</ns0:ConditionedBuildingVolume>
+        </ns0:BuildingConstruction>
+      </ns0:BuildingSummary>
+      <ns0:ClimateandRiskZones>
+        <ns0:ClimateZoneIECC>
+          <ns0:Year>2006</ns0:Year>
+          <ns0:ClimateZone>5B</ns0:ClimateZone>
+        </ns0:ClimateZoneIECC>
+        <ns0:WeatherStation>
+          <ns0:SystemIdentifier id="WeatherStation" />
+          <ns0:Name>USA_CO_Denver.Intl.AP.725650_TMY3</ns0:Name>
+          <ns0:extension>
+            <ns0:EPWFilePath>USA_CO_Denver.Intl.AP.725650_TMY3.epw</ns0:EPWFilePath>
+          </ns0:extension>
+        </ns0:WeatherStation>
+      </ns0:ClimateandRiskZones>
+      <ns0:Enclosure>
+        <ns0:AirInfiltration>
+          <ns0:AirInfiltrationMeasurement>
+            <ns0:SystemIdentifier id="AirInfiltrationMeasurement1" />
+            <ns0:HousePressure>50.0</ns0:HousePressure>
+            <ns0:BuildingAirLeakage>
+              <ns0:UnitofMeasure>ACH</ns0:UnitofMeasure>
+              <ns0:AirLeakage>3.0</ns0:AirLeakage>
+            </ns0:BuildingAirLeakage>
+            <ns0:InfiltrationVolume>21600.0</ns0:InfiltrationVolume>
+          </ns0:AirInfiltrationMeasurement>
+        </ns0:AirInfiltration>
+        <ns0:Attics>
+          <ns0:Attic>
+            <ns0:SystemIdentifier id="Attic1" />
+            <ns0:AtticType>
+              <ns0:Attic>
+                <ns0:Vented>false</ns0:Vented>
+              </ns0:Attic>
+            </ns0:AtticType>
+            <ns0:WithinInfiltrationVolume>false</ns0:WithinInfiltrationVolume>
+            <ns0:AttachedToRoof idref="Roof1" />
+            <ns0:AttachedToWall idref="Wall2" />
+            <ns0:AttachedToFloor idref="Floor1" />
+          </ns0:Attic>
+        </ns0:Attics>
+        <ns0:Foundations>
+          <ns0:Foundation>
+            <ns0:SystemIdentifier id="Foundation1" />
+            <ns0:FoundationType>
+              <ns0:Basement>
+                <ns0:Conditioned>true</ns0:Conditioned>
+              </ns0:Basement>
+            </ns0:FoundationType>
+            <ns0:AttachedToRimJoist idref="RimJoist1" />
+            <ns0:AttachedToFoundationWall idref="FoundationWall1" />
+            <ns0:AttachedToSlab idref="Slab1" />
+          </ns0:Foundation>
+        </ns0:Foundations>
+        <ns0:Roofs>
+          <ns0:Roof>
+            <ns0:SystemIdentifier id="Roof1" />
+            <ns0:InteriorAdjacentTo>attic - unvented</ns0:InteriorAdjacentTo>
+            <ns0:Area>1509.3</ns0:Area>
+            <ns0:RoofType>asphalt or fiberglass shingles</ns0:RoofType>
+            <ns0:SolarAbsorptance>0.7</ns0:SolarAbsorptance>
+            <ns0:Emittance>0.92</ns0:Emittance>
+            <ns0:Pitch>6.0</ns0:Pitch>
+            <ns0:Insulation>
+              <ns0:SystemIdentifier id="Roof1Insulation" />
+              <ns0:AssemblyEffectiveRValue>2.3</ns0:AssemblyEffectiveRValue>
+            </ns0:Insulation>
+          </ns0:Roof>
+        </ns0:Roofs>
+        <ns0:RimJoists>
+          <ns0:RimJoist>
+            <ns0:SystemIdentifier id="RimJoist1" />
+            <ns0:ExteriorAdjacentTo>outside</ns0:ExteriorAdjacentTo>
+            <ns0:InteriorAdjacentTo>basement - conditioned</ns0:InteriorAdjacentTo>
+            <ns0:Area>115.6</ns0:Area>
+            <ns0:Siding>wood siding</ns0:Siding>
+            <ns0:SolarAbsorptance>0.7</ns0:SolarAbsorptance>
+            <ns0:Emittance>0.92</ns0:Emittance>
+            <ns0:Insulation>
+              <ns0:SystemIdentifier id="RimJoist1Insulation" />
+              <ns0:AssemblyEffectiveRValue>23.0</ns0:AssemblyEffectiveRValue>
+            </ns0:Insulation>
+          </ns0:RimJoist>
+        </ns0:RimJoists>
+        <ns0:Walls>
+          <ns0:Wall>
+            <ns0:SystemIdentifier id="Wall1" />
+            <ns0:ExteriorAdjacentTo>outside</ns0:ExteriorAdjacentTo>
+            <ns0:InteriorAdjacentTo>conditioned space</ns0:InteriorAdjacentTo>
+            <ns0:WallType>
+              <ns0:WoodStud />
+            </ns0:WallType>
+            <ns0:Area>1200.0</ns0:Area>
+            <ns0:Siding>wood siding</ns0:Siding>
+            <ns0:SolarAbsorptance>0.7</ns0:SolarAbsorptance>
+            <ns0:Emittance>0.92</ns0:Emittance>
+            <ns0:InteriorFinish>
+              <ns0:Type>gypsum board</ns0:Type>
+            </ns0:InteriorFinish>
+            <ns0:Insulation>
+              <ns0:SystemIdentifier id="Wall1Insulation" />
+              <ns0:AssemblyEffectiveRValue>23.0</ns0:AssemblyEffectiveRValue>
+            </ns0:Insulation>
+          </ns0:Wall>
+          <ns0:Wall>
+            <ns0:SystemIdentifier id="Wall2" />
+            <ns0:ExteriorAdjacentTo>outside</ns0:ExteriorAdjacentTo>
+            <ns0:InteriorAdjacentTo>attic - unvented</ns0:InteriorAdjacentTo>
+            <ns0:AtticWallType>gable</ns0:AtticWallType>
+            <ns0:WallType>
+              <ns0:WoodStud />
+            </ns0:WallType>
+            <ns0:Area>225.0</ns0:Area>
+            <ns0:Siding>wood siding</ns0:Siding>
+            <ns0:SolarAbsorptance>0.7</ns0:SolarAbsorptance>
+            <ns0:Emittance>0.92</ns0:Emittance>
+            <ns0:Insulation>
+              <ns0:SystemIdentifier id="Wall2Insulation" />
+              <ns0:AssemblyEffectiveRValue>4.0</ns0:AssemblyEffectiveRValue>
+            </ns0:Insulation>
+          </ns0:Wall>
+        </ns0:Walls>
+        <ns0:FoundationWalls>
+          <ns0:FoundationWall>
+            <ns0:SystemIdentifier id="FoundationWall1" />
+            <ns0:ExteriorAdjacentTo>ground</ns0:ExteriorAdjacentTo>
+            <ns0:InteriorAdjacentTo>basement - conditioned</ns0:InteriorAdjacentTo>
+            <ns0:Height>8.0</ns0:Height>
+            <ns0:Area>1200.0</ns0:Area>
+            <ns0:Thickness>8.0</ns0:Thickness>
+            <ns0:DepthBelowGrade>7.0</ns0:DepthBelowGrade>
+            <ns0:InteriorFinish>
+              <ns0:Type>gypsum board</ns0:Type>
+            </ns0:InteriorFinish>
+            <ns0:Insulation>
+              <ns0:SystemIdentifier id="FoundationWall1Insulation" />
+              <ns0:Layer>
+                <ns0:InstallationType>continuous - exterior</ns0:InstallationType>
+                <ns0:NominalRValue>8.9</ns0:NominalRValue>
+                <ns0:DistanceToTopOfInsulation>0.0</ns0:DistanceToTopOfInsulation>
+                <ns0:DistanceToBottomOfInsulation>8.0</ns0:DistanceToBottomOfInsulation>
+              </ns0:Layer>
+              <ns0:Layer>
+                <ns0:InstallationType>continuous - interior</ns0:InstallationType>
+                <ns0:NominalRValue>0.0</ns0:NominalRValue>
+              </ns0:Layer>
+            </ns0:Insulation>
+          </ns0:FoundationWall>
+        </ns0:FoundationWalls>
+        <ns0:Floors>
+          <ns0:Floor>
+            <ns0:SystemIdentifier id="Floor1" />
+            <ns0:ExteriorAdjacentTo>attic - unvented</ns0:ExteriorAdjacentTo>
+            <ns0:InteriorAdjacentTo>conditioned space</ns0:InteriorAdjacentTo>
+            <ns0:FloorOrCeiling>ceiling</ns0:FloorOrCeiling>
+            <ns0:FloorType>
+              <ns0:WoodFrame />
+            </ns0:FloorType>
+            <ns0:Area>1350.0</ns0:Area>
+            <ns0:InteriorFinish>
+              <ns0:Type>gypsum board</ns0:Type>
+            </ns0:InteriorFinish>
+            <ns0:Insulation>
+              <ns0:SystemIdentifier id="Floor1Insulation" />
+              <ns0:AssemblyEffectiveRValue>39.3</ns0:AssemblyEffectiveRValue>
+            </ns0:Insulation>
+          </ns0:Floor>
+        </ns0:Floors>
+        <ns0:Slabs>
+          <ns0:Slab>
+            <ns0:SystemIdentifier id="Slab1" />
+            <ns0:InteriorAdjacentTo>basement - conditioned</ns0:InteriorAdjacentTo>
+            <ns0:Area>1350.0</ns0:Area>
+            <ns0:Thickness>4.0</ns0:Thickness>
+            <ns0:ExposedPerimeter>150.0</ns0:ExposedPerimeter>
+            <ns0:PerimeterInsulation>
+              <ns0:SystemIdentifier id="Slab1PerimeterInsulation" />
+              <ns0:Layer>
+                <ns0:NominalRValue>0.0</ns0:NominalRValue>
+                <ns0:InsulationDepth>0.0</ns0:InsulationDepth>
+              </ns0:Layer>
+            </ns0:PerimeterInsulation>
+            <ns0:UnderSlabInsulation>
+              <ns0:SystemIdentifier id="Slab1UnderSlabInsulation" />
+              <ns0:Layer>
+                <ns0:NominalRValue>0.0</ns0:NominalRValue>
+                <ns0:InsulationWidth>0.0</ns0:InsulationWidth>
+              </ns0:Layer>
+            </ns0:UnderSlabInsulation>
+            <ns0:extension>
+              <ns0:CarpetFraction>0.0</ns0:CarpetFraction>
+              <ns0:CarpetRValue>0.0</ns0:CarpetRValue>
+            </ns0:extension>
+          </ns0:Slab>
+        </ns0:Slabs>
+        <ns0:Windows>
+          <ns0:Window>
+            <ns0:SystemIdentifier id="Window1" />
+            <ns0:Area>108.0</ns0:Area>
+            <ns0:Azimuth>0</ns0:Azimuth>
+            <ns0:UFactor>0.27</ns0:UFactor>
+            <ns0:SHGC>0.31</ns0:SHGC>
+            <ns0:InteriorShading>
+              <ns0:SystemIdentifier id="Window1InteriorShading" />
+              <ns0:SummerShadingCoefficient>0.7</ns0:SummerShadingCoefficient>
+              <ns0:WinterShadingCoefficient>0.85</ns0:WinterShadingCoefficient>
+            </ns0:InteriorShading>
+            <ns0:FractionOperable>0.67</ns0:FractionOperable>
+            <ns0:AttachedToWall idref="Wall1" />
+          </ns0:Window>
+          <ns0:Window>
+            <ns0:SystemIdentifier id="Window2" />
+            <ns0:Area>72.0</ns0:Area>
+            <ns0:Azimuth>90</ns0:Azimuth>
+            <ns0:UFactor>0.27</ns0:UFactor>
+            <ns0:SHGC>0.31</ns0:SHGC>
+            <ns0:InteriorShading>
+              <ns0:SystemIdentifier id="Window2InteriorShading" />
+              <ns0:SummerShadingCoefficient>0.7</ns0:SummerShadingCoefficient>
+              <ns0:WinterShadingCoefficient>0.85</ns0:WinterShadingCoefficient>
+            </ns0:InteriorShading>
+            <ns0:FractionOperable>0.67</ns0:FractionOperable>
+            <ns0:AttachedToWall idref="Wall1" />
+          </ns0:Window>
+          <ns0:Window>
+            <ns0:SystemIdentifier id="Window3" />
+            <ns0:Area>108.0</ns0:Area>
+            <ns0:Azimuth>180</ns0:Azimuth>
+            <ns0:UFactor>0.27</ns0:UFactor>
+            <ns0:SHGC>0.31</ns0:SHGC>
+            <ns0:InteriorShading>
+              <ns0:SystemIdentifier id="Window3InteriorShading" />
+              <ns0:SummerShadingCoefficient>0.7</ns0:SummerShadingCoefficient>
+              <ns0:WinterShadingCoefficient>0.85</ns0:WinterShadingCoefficient>
+            </ns0:InteriorShading>
+            <ns0:FractionOperable>0.67</ns0:FractionOperable>
+            <ns0:AttachedToWall idref="Wall1" />
+          </ns0:Window>
+          <ns0:Window>
+            <ns0:SystemIdentifier id="Window4" />
+            <ns0:Area>72.0</ns0:Area>
+            <ns0:Azimuth>270</ns0:Azimuth>
+            <ns0:UFactor>0.27</ns0:UFactor>
+            <ns0:SHGC>0.31</ns0:SHGC>
+            <ns0:InteriorShading>
+              <ns0:SystemIdentifier id="Window4InteriorShading" />
+              <ns0:SummerShadingCoefficient>0.7</ns0:SummerShadingCoefficient>
+              <ns0:WinterShadingCoefficient>0.85</ns0:WinterShadingCoefficient>
+            </ns0:InteriorShading>
+            <ns0:FractionOperable>0.67</ns0:FractionOperable>
+            <ns0:AttachedToWall idref="Wall1" />
+          </ns0:Window>
+        </ns0:Windows>
+        <ns0:Doors>
+          <ns0:Door>
+            <ns0:SystemIdentifier id="Door1" />
+            <ns0:AttachedToWall idref="Wall1" />
+            <ns0:Area>40.0</ns0:Area>
+            <ns0:Azimuth>180</ns0:Azimuth>
+            <ns0:RValue>4.4</ns0:RValue>
+          </ns0:Door>
+        </ns0:Doors>
+      </ns0:Enclosure>
+      <ns0:Systems>
+        <ns0:HVAC>
+          <ns0:HVACPlant>
+            <ns0:PrimarySystems>
+              <ns0:PrimaryHeatingSystem idref="HeatingSystem1" />
+              <ns0:PrimaryCoolingSystem idref="CoolingSystem1" />
+            </ns0:PrimarySystems>
+            <ns0:HeatingSystem>
+              <ns0:SystemIdentifier id="HeatingSystem1" />
+              <ns0:DistributionSystem idref="HVACDistribution1" />
+              <ns0:HeatingSystemType>
+                <ns0:Furnace />
+              </ns0:HeatingSystemType>
+              <ns0:HeatingSystemFuel>natural gas</ns0:HeatingSystemFuel>
+              <ns0:HeatingCapacity>36000.0</ns0:HeatingCapacity>
+              <ns0:AnnualHeatingEfficiency>
+                <ns0:Units>AFUE</ns0:Units>
+                <ns0:Value>0.92</ns0:Value>
+              </ns0:AnnualHeatingEfficiency>
+              <ns0:FractionHeatLoadServed>1.0</ns0:FractionHeatLoadServed>
+            </ns0:HeatingSystem>
+            <ns0:CoolingSystem>
+              <ns0:SystemIdentifier id="CoolingSystem1" />
+              <ns0:DistributionSystem idref="HVACDistribution1" />
+              <ns0:CoolingSystemType>central air conditioner</ns0:CoolingSystemType>
+              <ns0:CoolingSystemFuel>electricity</ns0:CoolingSystemFuel>
+              <ns0:CoolingCapacity>24000.0</ns0:CoolingCapacity>
+              <ns0:CompressorType>single stage</ns0:CompressorType>
+              <ns0:FractionCoolLoadServed>1.0</ns0:FractionCoolLoadServed>
+              <ns0:AnnualCoolingEfficiency>
+                <ns0:Units>SEER</ns0:Units>
+                <ns0:Value>13.0</ns0:Value>
+              </ns0:AnnualCoolingEfficiency>
+              <ns0:SensibleHeatFraction>0.73</ns0:SensibleHeatFraction>
+            </ns0:CoolingSystem>
+          </ns0:HVACPlant>
+          <ns0:HVACControl>
+            <ns0:SystemIdentifier id="HVACControl1" />
+            <ns0:SetpointTempHeatingSeason>68.0</ns0:SetpointTempHeatingSeason>
+            <ns0:SetpointTempCoolingSeason>78.0</ns0:SetpointTempCoolingSeason>
+          </ns0:HVACControl>
+          <ns0:HVACDistribution>
+            <ns0:SystemIdentifier id="HVACDistribution1" />
+            <ns0:DistributionSystemType>
+              <ns0:AirDistribution>
+                <ns0:AirDistributionType>regular velocity</ns0:AirDistributionType>
+                <ns0:DuctLeakageMeasurement>
+                  <ns0:DuctType>supply</ns0:DuctType>
+                  <ns0:DuctLeakage>
+                    <ns0:Units>CFM25</ns0:Units>
+                    <ns0:Value>75.0</ns0:Value>
+                    <ns0:TotalOrToOutside>to outside</ns0:TotalOrToOutside>
+                  </ns0:DuctLeakage>
+                </ns0:DuctLeakageMeasurement>
+                <ns0:DuctLeakageMeasurement>
+                  <ns0:DuctType>return</ns0:DuctType>
+                  <ns0:DuctLeakage>
+                    <ns0:Units>CFM25</ns0:Units>
+                    <ns0:Value>25.0</ns0:Value>
+                    <ns0:TotalOrToOutside>to outside</ns0:TotalOrToOutside>
+                  </ns0:DuctLeakage>
+                </ns0:DuctLeakageMeasurement>
+                <ns0:Ducts>
+                  <ns0:SystemIdentifier id="Ducts1" />
+                  <ns0:DuctType>supply</ns0:DuctType>
+                  <ns0:DuctInsulationRValue>4.0</ns0:DuctInsulationRValue>
+                  <ns0:DuctLocation>attic - unvented</ns0:DuctLocation>
+                  <ns0:DuctSurfaceArea>150.0</ns0:DuctSurfaceArea>
+                </ns0:Ducts>
+                <ns0:Ducts>
+                  <ns0:SystemIdentifier id="Ducts2" />
+                  <ns0:DuctType>return</ns0:DuctType>
+                  <ns0:DuctInsulationRValue>0.0</ns0:DuctInsulationRValue>
+                  <ns0:DuctLocation>attic - unvented</ns0:DuctLocation>
+                  <ns0:DuctSurfaceArea>50.0</ns0:DuctSurfaceArea>
+                </ns0:Ducts>
+              </ns0:AirDistribution>
+            </ns0:DistributionSystemType>
+          </ns0:HVACDistribution>
+        </ns0:HVAC>
+        <ns0:WaterHeating>
+          <ns0:WaterHeatingSystem>
+            <ns0:SystemIdentifier id="WaterHeatingSystem1" />
+            <ns0:FuelType>electricity</ns0:FuelType>
+            <ns0:WaterHeaterType>storage water heater</ns0:WaterHeaterType>
+            <ns0:Location>conditioned space</ns0:Location>
+            <ns0:TankVolume>40.0</ns0:TankVolume>
+            <ns0:FractionDHWLoadServed>1.0</ns0:FractionDHWLoadServed>
+            <ns0:HeatingCapacity>18767.0</ns0:HeatingCapacity>
+            <ns0:EnergyFactor>0.95</ns0:EnergyFactor>
+            <ns0:HotWaterTemperature>125.0</ns0:HotWaterTemperature>
+          </ns0:WaterHeatingSystem>
+          <ns0:HotWaterDistribution>
+            <ns0:SystemIdentifier id="HotWaterDistribution1" />
+            <ns0:SystemType>
+              <ns0:Standard>
+                <ns0:PipingLength>50.0</ns0:PipingLength>
+              </ns0:Standard>
+            </ns0:SystemType>
+            <ns0:PipeInsulation>
+              <ns0:PipeRValue>0.0</ns0:PipeRValue>
+            </ns0:PipeInsulation>
+          </ns0:HotWaterDistribution>
+          <ns0:WaterFixture>
+            <ns0:SystemIdentifier id="WaterFixture1" />
+            <ns0:WaterFixtureType>shower head</ns0:WaterFixtureType>
+            <ns0:LowFlow>true</ns0:LowFlow>
+          </ns0:WaterFixture>
+          <ns0:WaterFixture>
+            <ns0:SystemIdentifier id="WaterFixture2" />
+            <ns0:WaterFixtureType>faucet</ns0:WaterFixtureType>
+            <ns0:LowFlow>false</ns0:LowFlow>
+          </ns0:WaterFixture>
+        </ns0:WaterHeating>
+      </ns0:Systems>
+      <ns0:Appliances>
+        <ns0:ClothesWasher>
+          <ns0:SystemIdentifier id="ClothesWasher1" />
+          <ns0:Location>conditioned space</ns0:Location>
+          <ns0:IntegratedModifiedEnergyFactor>1.21</ns0:IntegratedModifiedEnergyFactor>
+          <ns0:RatedAnnualkWh>380.0</ns0:RatedAnnualkWh>
+          <ns0:LabelElectricRate>0.12</ns0:LabelElectricRate>
+          <ns0:LabelGasRate>1.09</ns0:LabelGasRate>
+          <ns0:LabelAnnualGasCost>27.0</ns0:LabelAnnualGasCost>
+          <ns0:LabelUsage>6.0</ns0:LabelUsage>
+          <ns0:Capacity>3.2</ns0:Capacity>
+        </ns0:ClothesWasher>
+        <ns0:ClothesDryer>
+          <ns0:SystemIdentifier id="ClothesDryer1" />
+          <ns0:Location>conditioned space</ns0:Location>
+          <ns0:FuelType>electricity</ns0:FuelType>
+          <ns0:CombinedEnergyFactor>3.73</ns0:CombinedEnergyFactor>
+          <ns0:Vented>true</ns0:Vented>
+          <ns0:VentedFlowRate>150.0</ns0:VentedFlowRate>
+        </ns0:ClothesDryer>
+        <ns0:Dishwasher>
+          <ns0:SystemIdentifier id="Dishwasher1" />
+          <ns0:Location>conditioned space</ns0:Location>
+          <ns0:RatedAnnualkWh>307.0</ns0:RatedAnnualkWh>
+          <ns0:PlaceSettingCapacity>12</ns0:PlaceSettingCapacity>
+          <ns0:LabelElectricRate>0.12</ns0:LabelElectricRate>
+          <ns0:LabelGasRate>1.09</ns0:LabelGasRate>
+          <ns0:LabelAnnualGasCost>22.32</ns0:LabelAnnualGasCost>
+          <ns0:LabelUsage>4.0</ns0:LabelUsage>
+        </ns0:Dishwasher>
+        <ns0:Refrigerator>
+          <ns0:SystemIdentifier id="Refrigerator1" />
+          <ns0:Location>conditioned space</ns0:Location>
+          <ns0:RatedAnnualkWh>650.0</ns0:RatedAnnualkWh>
+        </ns0:Refrigerator>
+        <ns0:CookingRange>
+          <ns0:SystemIdentifier id="CookingRange1" />
+          <ns0:Location>conditioned space</ns0:Location>
+          <ns0:FuelType>electricity</ns0:FuelType>
+          <ns0:IsInduction>false</ns0:IsInduction>
+        </ns0:CookingRange>
+        <ns0:Oven>
+          <ns0:SystemIdentifier id="Oven1" />
+          <ns0:IsConvection>false</ns0:IsConvection>
+        </ns0:Oven>
+      </ns0:Appliances>
+      <ns0:Lighting>
+        <ns0:LightingGroup>
+          <ns0:SystemIdentifier id="LightingGroup1" />
+          <ns0:Location>interior</ns0:Location>
+          <ns0:FractionofUnitsInLocation>0.4</ns0:FractionofUnitsInLocation>
+          <ns0:LightingType>
+            <ns0:CompactFluorescent />
+          </ns0:LightingType>
+        </ns0:LightingGroup>
+        <ns0:LightingGroup>
+          <ns0:SystemIdentifier id="LightingGroup2" />
+          <ns0:Location>interior</ns0:Location>
+          <ns0:FractionofUnitsInLocation>0.1</ns0:FractionofUnitsInLocation>
+          <ns0:LightingType>
+            <ns0:FluorescentTube />
+          </ns0:LightingType>
+        </ns0:LightingGroup>
+        <ns0:LightingGroup>
+          <ns0:SystemIdentifier id="LightingGroup3" />
+          <ns0:Location>interior</ns0:Location>
+          <ns0:FractionofUnitsInLocation>0.25</ns0:FractionofUnitsInLocation>
+          <ns0:LightingType>
+            <ns0:LightEmittingDiode />
+          </ns0:LightingType>
+        </ns0:LightingGroup>
+        <ns0:LightingGroup>
+          <ns0:SystemIdentifier id="LightingGroup4" />
+          <ns0:Location>exterior</ns0:Location>
+          <ns0:FractionofUnitsInLocation>0.4</ns0:FractionofUnitsInLocation>
+          <ns0:LightingType>
+            <ns0:CompactFluorescent />
+          </ns0:LightingType>
+        </ns0:LightingGroup>
+        <ns0:LightingGroup>
+          <ns0:SystemIdentifier id="LightingGroup5" />
+          <ns0:Location>exterior</ns0:Location>
+          <ns0:FractionofUnitsInLocation>0.1</ns0:FractionofUnitsInLocation>
+          <ns0:LightingType>
+            <ns0:FluorescentTube />
+          </ns0:LightingType>
+        </ns0:LightingGroup>
+        <ns0:LightingGroup>
+          <ns0:SystemIdentifier id="LightingGroup6" />
+          <ns0:Location>exterior</ns0:Location>
+          <ns0:FractionofUnitsInLocation>0.25</ns0:FractionofUnitsInLocation>
+          <ns0:LightingType>
+            <ns0:LightEmittingDiode />
+          </ns0:LightingType>
+        </ns0:LightingGroup>
+      </ns0:Lighting>
+      <ns0:MiscLoads>
+        <ns0:PlugLoad>
+          <ns0:SystemIdentifier id="PlugLoad1" />
+          <ns0:PlugLoadType>TV other</ns0:PlugLoadType>
+          <ns0:Load>
+            <ns0:Units>kWh/year</ns0:Units>
+            <ns0:Value>620.0</ns0:Value>
+          </ns0:Load>
+        </ns0:PlugLoad>
+        <ns0:PlugLoad>
+          <ns0:SystemIdentifier id="PlugLoad2" />
+          <ns0:PlugLoadType>other</ns0:PlugLoadType>
+          <ns0:Load>
+            <ns0:Units>kWh/year</ns0:Units>
+            <ns0:Value>2457.0</ns0:Value>
+          </ns0:Load>
+          <ns0:extension>
+            <ns0:FracSensible>0.855</ns0:FracSensible>
+            <ns0:FracLatent>0.045</ns0:FracLatent>
+          </ns0:extension>
+        </ns0:PlugLoad>
+      </ns0:MiscLoads>
+    </ns0:BuildingDetails>
+  </ns0:Building>
+</ns0:HPXML>
